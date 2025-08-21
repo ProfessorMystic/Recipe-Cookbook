@@ -1,0 +1,115 @@
+/* Use system fonts for a clean, lightweight look */
+:root {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+}
+
+/* Wrap content in a centered column with some breathing room */
+.container {
+  max-width: 880px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+/* Basic form grid so inputs stack neatly */
+form {
+  display: grid;
+  gap: .6rem;
+  margin-bottom: 1rem;
+}
+
+/* Make inputs feel tappable/clickable; rounded corners for friendliness */
+input, textarea {
+  padding: .7rem;
+  border: 1px solid #cfcfcf;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+/* Larger textarea height */
+textarea {
+  min-height: 110px;
+}
+
+/* Buttons: simple pill look */
+button {
+  padding: .65rem .95rem;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  background: #1f6feb;
+  color: white;
+  font-weight: 600;
+}
+
+/* Secondary/toolbar layout */
+.toolbar {
+  display: flex;
+  gap: .6rem;
+  margin-bottom: 1rem;
+}
+.toolbar input {
+  flex: 1;
+}
+
+/* Status message box for success/error notices */
+.status {
+  margin-bottom: 1rem;
+  padding: .6rem .8rem;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  display: none;        /* hidden by default; JS toggles it */
+}
+.status.show { display: block; }
+.status.ok { background: #e7f5ee; border-color: #b6e2cd; color: #0b5c38; }
+.status.err { background: #ffe9e9; border-color: #ffb6b6; color: #8b1a1a; }
+
+/* Recipe list items: card-ish look */
+li {
+  border: 1px solid #eee;
+  padding: .9rem;
+  border-radius: 12px;
+  margin-bottom: .7rem;
+  background: #fff;
+  box-shadow: 0 1px 0 rgba(0,0,0,.02);
+}
+
+/* Tighten the title spacing */
+li h3 {
+  margin: 0 0 .35rem;
+  font-size: 1.1rem;
+}
+
+/* Ingredient/Instruction blocks use pre-wrap to keep newlines */
+li .meta {
+  color: #444;
+  white-space: pre-wrap;
+  margin-top: .25rem;
+}
+
+/* Edit/Delete button row */
+li .actions {
+  margin-top: .6rem;
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+}
+
+/* Secondary (neutral) buttons */
+button.neutral {
+  background: #e9eef6;
+  color: #0d3a66;
+}
+
+/* Danger (delete) buttons */
+button.danger {
+  background: #e44848;
+}
+
+/* Small helper class for visually-hidden labels if needed later */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden; clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}

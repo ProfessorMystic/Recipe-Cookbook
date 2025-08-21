@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Recipe Cookbook</title>
+  <!-- Link to our stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+  <!-- Main page container just to center things and control width -->
+  <main class="container">
+    <h1>Recipe Cookbook</h1>
+
+    <!-- Simple status area to show success/error messages -->
+    <div id="status" class="status" aria-live="polite"><!-- filled by JS --></div>
+
+    <!-- Form to create a new recipe -->
+    <form id="recipe-form">
+      <!-- Title input (text) -->
+      <input id="title" placeholder="Title" required />
+
+      <!-- Ingredients textarea; user can type comma- or line-separated text -->
+      <textarea id="ingredients" placeholder="Ingredients (comma or line separated)" required></textarea>
+
+      <!-- Instructions textarea -->
+      <textarea id="instructions" placeholder="Instructions" required></textarea>
+
+      <!-- Submit button to add recipe -->
+      <button type="submit">Add Recipe</button>
+    </form>
+
+    <!-- Toolbar with search + clear buttons -->
+    <div class="toolbar">
+      <input id="search" placeholder="Search by title..." />
+      <button id="searchBtn" type="button">Search</button>
+      <button id="clearBtn" type="button">Clear</button>
+    </div>
+
+    <!-- Unordered list that will be populated with recipe <li> items via JS -->
+    <ul id="list"></ul>
+  </main>
+
+  <!-- Our app logic -->
+  <script src="app.js"></script>
+</body>
+</html>
